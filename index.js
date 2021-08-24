@@ -298,7 +298,7 @@ function createHtmlFileList(files, dir, useIcons, view) {
       ? file.stat.mtime.toLocaleTimeString('de-DE') + ' ' + file.stat.mtime.toLocaleDateString('de-DE')
       : '';
     var size = file.stat && !isDir
-      ? file.stat.size
+      ? `${(file.stat.size / 1000).toFixed(2)}KB`
       : '';
 
     return '<li><a href="'
