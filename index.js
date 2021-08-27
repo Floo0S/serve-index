@@ -311,6 +311,12 @@ function createHtmlFileList(files, dir, useIcons, view) {
       + '</a></li>';
   }).join('\n');
 
+  html += '<li class="header">'
+  + '<span class="name">Total: '+files.length+'</span>'
+  + '<span></span>'
+  + '<span></span>'
+  + '</li>'
+
   html += '</ul>';
 
   return html;
